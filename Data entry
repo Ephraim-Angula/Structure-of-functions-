@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+#include"functions.h"
 void enterData(struct Department departments[], int numDepartments) {
 
     for (int i = 0; i < numDepartments; i++) {
