@@ -1,4 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include"functions.h"
+
 Function to display data for students and their courses
 
 void displayData(struct Department departments[], int numDepartments) {
