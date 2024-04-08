@@ -1,0 +1,57 @@
+#include<stdio.h>
+void enterData(struct Department departments[], int numDepartments) {
+
+    for (int i = 0; i < numDepartments; i++) {
+
+        printf("Enter department name: ");
+
+        scanf("%s", departments[i].name);
+
+
+
+        printf("Enter number of students in %s: ", departments[i].name);
+
+        scanf("%d", &departments[i].numStudents);
+
+
+
+        for (int j = 0; j < departments[i].numStudents; j++) {
+
+            printf("Enter student name: ");
+
+            scanf("%s", departments[i].students[j].name);
+
+
+
+            printf("Enter student age: ");
+
+            scanf("%d", &departments[i].students[j].age);
+
+
+
+            printf("Enter number of courses for %s: ", departments[i].students[j].name);
+
+            scanf("%d", &departments[i].students[j].numCourses);
+
+
+
+            for (int k = 0; k < departments[i].students[j].numCourses; k++) {
+
+                printf("Enter course name: ");
+
+                scanf("%s", departments[i].students[j].courses[k].name);
+
+
+
+                printf("Enter course credits: ");
+
+                scanf("%d", &departments[i].students[j].courses[k].credits);
+
+            }
+
+        }
+
+    }
+
+return 0;
+}
