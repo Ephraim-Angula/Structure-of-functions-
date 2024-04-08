@@ -1,0 +1,38 @@
+#include<stdio.h>
+Function to display data for students and their courses
+
+void displayData(struct Department departments[], int numDepartments) {
+
+    for (int i = 0; i < numDepartments; i++) {
+
+        printf("Department: %s\n", departments[i].name);
+
+
+
+        for (int j = 0; j < departments[i].numStudents; j++) {
+
+            printf("Student Name: %s\n", departments[i].students[j].name);
+
+            printf("Age: %d\n", departments[i].students[j].age);
+
+
+
+            printf("Courses:\n");
+
+            for (int k = 0; k < departments[i].students[j].numCourses; k++) {
+
+                printf("- %s (Credits: %d)\n", departments[i].students[j].courses[k].name, departments[i].students[j].courses[k].credits);
+
+            }
+
+
+
+            printf("\n");
+
+        }
+
+    }
+
+}
+return 0;
+}
