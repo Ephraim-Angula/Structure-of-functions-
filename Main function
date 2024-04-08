@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Course {
+    char name[50];
+    int credits;
+}
+
+struct Student {
+    char name[50];
+    int age;
+    struct Course courses[5];
+    int numCourses;
+};
+struct Department {
+    char name[50];
+    struct Student students[100];
+    int numStudents;
+};
+
+int main() {
+    struct Department departments[3];
+    enterData(departments, 3);
+    displayData(departments, 3);
+    return 0;
+}
+
